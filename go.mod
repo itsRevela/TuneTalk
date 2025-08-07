@@ -1,6 +1,6 @@
 module mellowmetro.com/tunetalk
 
-go 1.24.6
+go 1.22
 
 require (
 	github.com/bwmarrin/discordgo v0.29.0
