@@ -295,6 +295,7 @@ func probeDecode(file string) error {
 	var stderr bytes.Buffer
 	cmd := exec.Command(
 		"ffmpeg",
+		"-y",
 		"-v", "error",
 		"-nostdin",
 		"-hide_banner",
@@ -320,6 +321,7 @@ func probeOpusEncode(file string) error {
 	var stderr bytes.Buffer
 	cmd := exec.Command(
 		"ffmpeg",
+		"-y",
 		"-v", "error",
 		"-nostdin",
 		"-hide_banner",
@@ -331,7 +333,7 @@ func probeOpusEncode(file string) error {
 	// If you are on Linux, replace "NUL" with "/dev/null"
 	if runtime.GOOS != "windows" {
 		cmd = exec.Command(
-			"ffmpeg", "-v", "error", "-nostdin", "-hide_banner",
+			"ffmpeg", "-y", "-v", "error", "-nostdin", "-hide_banner",
 			"-i", file, "-t", "1", "-c:a", "libopus", "-f", "ogg", "/dev/null",
 		)
 	}
