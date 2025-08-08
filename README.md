@@ -20,6 +20,7 @@ Before you can get TuneTalk running, you need to have a few things installed and
 -   **Go**: The Go programming language (version 1.18 or higher is recommended).
 -   **FFmpeg**: A command-line tool for handling audio and video. It must be installed and accessible in your system's PATH.
 -   **Discord Bot Token**: You need to create a Discord Application and a Bot to get a token. You can do this at the [Discord Developer Portal](https://discord.com/developers/applications).
+-   **Discord Bot Permissions**: Presence/Members/Message Intents turned on with the scopes "applications.commands" & "bot" (permissions = connect, send messages, speak, use voice activity, view channels).
 
 ---
 
