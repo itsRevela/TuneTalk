@@ -413,7 +413,7 @@ func startPlayback(s *discordgo.Session, guildID, channelID, filePath string) er
 	// Encoder options
 	opts := dca.StdEncodeOptions
 	opts.RawOutput = false // <-- THE FIX: Let dca handle Opus encoding.
-	opts.Bitrate = 320     // kbps
+	opts.Bitrate = 128     // kbps
 	//opts.Volume = 256      // This is the default volume, good to have explicitly.
 
 	log.Printf("[startPlayback] starting encoder for file %s", filePath)
